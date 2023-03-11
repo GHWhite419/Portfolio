@@ -1,0 +1,73 @@
+// Here are global styles and variables I'm using for my project
+
+// Typographic styles
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Oswald:wght@200&display=swap');
+
+$headerFont: 'Open Sans', sans-serif;
+$baseFont: 'Oswald', sans-serif;
+
+@mixin headerText {
+    font-family: $headerFont;
+    font-weight: 800;
+}
+
+html {
+    font-family: $baseFont;
+}
+
+h1 {
+    @include headerText;
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: .2rem;
+    padding: 0rem 9rem;
+}
+
+// Color variables
+$background: #FFF;
+$primary: #000;
+$secondary: #778899;
+
+// General styles
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    height: 5%;
+}
+
+footer {
+    height: 10%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    i {
+        color: $primary;
+    }
+    + p {
+        text-align: center;
+        margin: 0;
+        padding-top: .5rem;
+    }
+}

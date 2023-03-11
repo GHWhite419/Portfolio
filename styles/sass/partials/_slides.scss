@@ -1,0 +1,13 @@
+.intro {
+    background: url(../assets/redStripe.png);
+    height: 85vh;
+    background-size: 70rem;
+    background-position-x: -21rem;
+    background-position-y: -11rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    @media(min-width: 915px) {
+        background-position-x: -3rem;
+    }
+}
