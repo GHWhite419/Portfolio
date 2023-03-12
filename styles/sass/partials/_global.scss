@@ -18,9 +18,14 @@ html {
 h1 {
     @include headerText;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 3.5rem;
     letter-spacing: .2rem;
-    padding: 0rem 9rem;
+    position: relative;
+    bottom: 6rem;
+
+    @media(min-width: 625px) {
+        font-size: 5rem;
+    }
 }
 
 // Color variables
@@ -52,20 +57,40 @@ body {
 
 header {
     height: 5%;
+
+    i {
+        padding-top: 1rem;
+        position: absolute;
+        right: 1rem;
+    }
 }
 
 footer {
     height: 10%;
 }
 
+i {
+    color: $primary;
+    font-size: 1.5rem;
+}
+
+button {
+    font-family: $baseFont;
+i {
+    color: $secondary;
+}    
+}
+
 .social {
     display: flex;
     justify-content: center;
     margin: 0;
-    i {
-        color: $primary;
+
+    li {
+        padding: 0 .75rem;
     }
-    + p {
+
+    +p {
         text-align: center;
         margin: 0;
         padding-top: .5rem;

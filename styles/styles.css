@@ -236,9 +236,15 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 3.5rem;
   letter-spacing: 0.2rem;
-  padding: 0rem 9rem;
+  position: relative;
+  bottom: 6rem;
+}
+@media (min-width: 625px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 .wrapper {
@@ -265,9 +271,26 @@ body {
 header {
   height: 5%;
 }
+header i {
+  padding-top: 1rem;
+  position: absolute;
+  right: 1rem;
+}
 
 footer {
   height: 10%;
+}
+
+i {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: "Oswald", sans-serif;
+}
+button i {
+  color: #778899;
 }
 
 .social {
@@ -279,8 +302,8 @@ footer {
           justify-content: center;
   margin: 0;
 }
-.social i {
-  color: #000;
+.social li {
+  padding: 0 0.75rem;
 }
 .social + p {
   text-align: center;
@@ -306,4 +329,39 @@ footer {
   .intro {
     background-position-x: -3rem;
   }
+}
+
+.prevSlide,
+.nextSlide {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+.prevSlide i,
+.nextSlide i {
+  font-style: normal;
+  font-size: 3rem;
+}
+.prevSlide .imgContainer,
+.nextSlide .imgContainer {
+  width: 2.5rem;
+  margin: 0rem -0.25rem;
+}
+
+.prevSlide {
+  left: 0.5rem;
+}
+
+.nextSlide {
+  right: 0.5rem;
 }
