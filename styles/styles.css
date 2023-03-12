@@ -232,7 +232,7 @@ html {
   font-family: "Oswald", sans-serif;
 }
 
-h1 {
+h1, h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
@@ -242,7 +242,7 @@ h1 {
   bottom: 6rem;
 }
 @media (min-width: 625px) {
-  h1 {
+  h1, h2 {
     font-size: 5rem;
   }
 }
@@ -279,6 +279,9 @@ header i {
 
 footer {
   height: 10%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 i {
@@ -311,9 +314,26 @@ button i {
   padding-top: 0.5rem;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section {
+  height: 85vh;
+  min-width: 100%;
+  position: fixed;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .intro {
   background: url(../assets/redStripe.png);
-  height: 85vh;
   background-size: 70rem;
   background-position-x: -21rem;
   background-position-y: -11rem;
@@ -331,6 +351,34 @@ button i {
   }
 }
 
+.about {
+  background: url(../assets/purpleStripe.png);
+  background-size: 70rem;
+  background-position-x: -3rem;
+  background-position-y: -11rem;
+}
+
+.skillset {
+  background: url(../assets/lightBrownStripe.png);
+  background-size: 70rem;
+  background-position-x: -3rem;
+  background-position-y: -11rem;
+}
+
+.projects {
+  background: url(../assets/blueStripe.png);
+  background-size: 70rem;
+  background-position-x: -3rem;
+  background-position-y: -11rem;
+}
+
+.contact {
+  background: url(../assets/darkBrownStripe.png);
+  background-size: 70rem;
+  background-position-x: -3rem;
+  background-position-y: -11rem;
+}
+
 .prevSlide,
 .nextSlide {
   text-transform: uppercase;
@@ -346,6 +394,7 @@ button i {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1rem;
+  z-index: 10;
 }
 .prevSlide i,
 .nextSlide i {

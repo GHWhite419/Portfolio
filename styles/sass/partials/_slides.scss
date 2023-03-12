@@ -1,6 +1,18 @@
+main {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+section {
+    height: 85vh;
+    min-width: 100%;
+    position: fixed;
+    transition: .3s;
+}
+
 .intro {
     background: url(../assets/redStripe.png);
-    height: 85vh;
     background-size: 70rem;
     background-position-x: -21rem;
     background-position-y: -11rem;
@@ -11,6 +23,34 @@
     @media(min-width: 915px) {
         background-position-x: -3rem;
     }
+}
+
+.about {
+    background: url(../assets/purpleStripe.png);
+    background-size: 70rem;
+    background-position-x: -3rem;
+    background-position-y: -11rem;
+}
+
+.skillset {
+    background: url(../assets/lightBrownStripe.png);
+    background-size: 70rem;
+    background-position-x: -3rem;
+    background-position-y: -11rem;
+}
+
+.projects {
+    background: url(../assets/blueStripe.png);
+    background-size: 70rem;
+    background-position-x: -3rem;
+    background-position-y: -11rem;
+}
+
+.contact {
+    background: url(../assets/darkBrownStripe.png);
+    background-size: 70rem;
+    background-position-x: -3rem;
+    background-position-y: -11rem;
 }
 
 .prevSlide,
@@ -24,6 +64,8 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
+    z-index: 10;
+
     i {
         font-style: normal;
         font-size: 3rem;
