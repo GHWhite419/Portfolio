@@ -275,6 +275,7 @@ header i {
   padding-top: 1rem;
   position: absolute;
   right: 1rem;
+  z-index: 10;
 }
 
 footer {
@@ -360,6 +361,21 @@ section {
   background-size: 70rem;
   background-position-x: -3rem;
   background-position-y: -11rem;
+}
+.about .imgContainer {
+  max-width: 15rem;
+  position: absolute;
+  top: 7rem;
+  right: 14rem;
+}
+.about p {
+  max-width: 20rem;
+  margin-left: 4rem;
+  font-size: 1rem;
+}
+.about p:first-of-type {
+  max-width: 18rem;
+  margin-left: 5rem;
 }
 
 .skillset {

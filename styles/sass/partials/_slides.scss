@@ -34,6 +34,23 @@ section {
     background-size: 70rem;
     background-position-x: -3rem;
     background-position-y: -11rem;
+
+    .imgContainer {
+        max-width: 15rem;
+        position: absolute;
+        top: 7rem;
+        right: 14rem;
+    }
+
+    p {
+        max-width: 20rem;
+        margin-left: 4rem;
+        font-size: 1rem;
+        &:first-of-type {
+            max-width: 18rem;
+            margin-left: 5rem;
+        }
+    }
 }
 
 .skillset {
@@ -83,9 +100,11 @@ section {
 
 .prevSlide {
     left: .5rem;
+
     .imgContainer {
         margin-right: -1.75rem;
     }
+
     img {
         object-position: -1.25rem;
     }
@@ -93,9 +112,11 @@ section {
 
 .nextSlide {
     right: .5rem;
+
     .imgContainer {
         margin-left: -1.75rem;
     }
+
     img {
         object-position: 1.25rem;
     }
