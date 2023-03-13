@@ -318,6 +318,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.slideshow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -328,8 +334,6 @@ section {
   height: 85vh;
   min-width: 100%;
   position: fixed;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .intro {
@@ -385,8 +389,7 @@ section {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  bottom: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,6 +398,7 @@ section {
           align-items: center;
   font-size: 1rem;
   z-index: 10;
+  height: 0;
 }
 .prevSlide i,
 .nextSlide i {
@@ -410,7 +414,21 @@ section {
 .prevSlide {
   left: 0.5rem;
 }
+.prevSlide .imgContainer {
+  margin-right: -1.75rem;
+}
+.prevSlide img {
+  -o-object-position: -1.25rem;
+     object-position: -1.25rem;
+}
 
 .nextSlide {
   right: 0.5rem;
+}
+.nextSlide .imgContainer {
+  margin-left: -1.75rem;
+}
+.nextSlide img {
+  -o-object-position: 1.25rem;
+     object-position: 1.25rem;
 }

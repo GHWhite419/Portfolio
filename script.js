@@ -19,6 +19,7 @@ prevSlide.addEventListener('click', function(){
 
     slideShow.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+        slide.style.transition = '.3s';
     })
 })
 
@@ -29,5 +30,6 @@ nextSlide.addEventListener('click', function(){
     
     slideShow.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+        slide.style.transition = '.3s';
     })
 })
