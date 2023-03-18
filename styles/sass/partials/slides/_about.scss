@@ -1,0 +1,63 @@
+
+.about {
+    background: url(../assets/purpleStripe.png);
+    background-size: 70rem;
+    background-position-x: -3rem;
+    background-position-y: -11rem;
+    h2 {
+        margin-bottom: -5rem;
+    }
+
+    .bio {
+        opacity: .85;
+        background-color: white;
+        max-width: 27rem;
+        border: 3px solid purple;
+        border-radius: 5px;
+        padding: 1rem;
+
+        p {
+            max-width: 27rem;
+            margin-left: 0rem;
+            font-size: 1.3rem;
+            margin: 0;
+            margin-top: .8rem;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .skillList {
+        position: absolute;
+        top: 1rem;
+        right: 6rem;
+
+        h3 {
+            margin: 0;
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 25rem;
+        justify-content: center;
+        margin: 0;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        i {
+            font-size: 4.5rem;
+            color: #4A3556;
+        }
+    }
+}
