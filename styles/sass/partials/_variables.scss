@@ -12,6 +12,18 @@ $secondary: #778899;
     font-weight: 800;
 }
 
+@mixin border {
+    border: 4px solid;
+    border-radius: 5px;
+}
+
+@mixin contentBox {
+    opacity: .85;
+    background-color: $background;
+    padding: 1rem;
+    @include border;
+}
+ 
 @mixin modalArrowLeft {
     &:after {
         content: '';

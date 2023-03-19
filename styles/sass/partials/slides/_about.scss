@@ -1,20 +1,24 @@
+@use '../variables.scss' as *;
+$aboutColor: #5C4971;
 
 .about {
     background: url(../assets/purpleStripe.png);
     background-size: 70rem;
-    background-position-x: -3rem;
+    background-position-x: -38rem;
     background-position-y: -11rem;
+    overflow: scroll;
+
     h2 {
+        margin-top: 7rem; // Remove for wide screen
         margin-bottom: -5rem;
+        text-align: center;
     }
 
     .bio {
-        opacity: .85;
-        background-color: white;
         max-width: 27rem;
-        border: 3px solid purple;
-        border-radius: 5px;
-        padding: 1rem;
+        @include contentBox;
+        border-color: $aboutColor;
+        margin: auto;
 
         p {
             max-width: 27rem;
@@ -30,9 +34,16 @@
     }
 
     .skillList {
-        position: absolute;
-        top: 1rem;
-        right: 6rem;
+        // Desktop/wide screen styles
+        // position: absolute;
+        // top: 1rem;
+        // right: 6rem;
+        @include contentBox;
+        border-color: $aboutColor;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        max-width: 27rem;
 
         h3 {
             margin: 0;
@@ -57,7 +68,7 @@
 
         i {
             font-size: 4.5rem;
-            color: #4A3556;
+            color: $aboutColor;
         }
     }
 }

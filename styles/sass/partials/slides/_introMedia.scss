@@ -11,12 +11,12 @@
         background-position-y: -11rem;
     }
 
-    // @media (min-height: 670px) {
-    //     overflow-y: hidden;
-    // }
-
     @media(min-width: 915px) {
         background-position-x: -3rem;
+    }
+
+    @media(min-width: 1200px) and (orientation: landscape) {
+        overflow: hidden;
     }
 
     h1 {
@@ -61,7 +61,6 @@
 
             @media(min-width: 1200px) and (orientation: landscape) {
                 bottom: -3rem;
-                overflow: hidden;
             }
         }
     }
