@@ -3,7 +3,11 @@
 @use './partials/slides.scss';
 @use './partials/variables.scss' as *;
 
+// Individual Slides
 @use './partials/slides/intro.scss';
 @use './partials/slides/about.scss';
 @use './partials/slides/projects.scss';
 @use './partials/slides/contact.scss';
+
+// Responsive slides
+@use './partials/slides/introMedia.scss';
