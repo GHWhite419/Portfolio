@@ -63,6 +63,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: .8rem;
+    @media (min-width: 405px) {
+        font-size: 1rem;
+    }
 }
 
 i {

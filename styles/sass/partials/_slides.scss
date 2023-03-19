@@ -12,6 +12,9 @@ section {
     height: 85vh;
     min-width: 100%;
     position: fixed;
+    // @media (min-height: 324px) and (orientation: landscape) {
+    //     overflow-y: scroll;
+    // }
 }
 
 .prevSlide,
@@ -20,12 +23,16 @@ section {
     background-color: transparent;
     border: none;
     position: absolute;
-    bottom: 50%;
     display: flex;
     align-items: center;
     font-size: 1rem;
     z-index: 10;
     height: 0;
+    bottom: 15%;
+
+    @media(min-width: 915px) {
+        bottom: 50%;
+    }
 
     i {
         font-style: normal;
