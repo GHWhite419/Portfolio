@@ -37,18 +37,24 @@ nextSlide.addEventListener('click', function () {
 // Project modal popups
 const projectButton = document.querySelectorAll('.projectButton');
 const projectModal = document.querySelectorAll('.projectModal');
+const closeModal = document.querySelectorAll('.closeModal');
 
 projectButton.forEach(button => {
     button.addEventListener('click', (e) => {
         const index = Array.from(projectButton).indexOf(e.target);
-        projectModal.forEach(modal => {
-                modal.classList.add('modalHidden');
-        })
         const targetModal = projectModal[index];
         targetModal.classList.toggle('modalHidden');
+        projectModal.forEach(modal => {
+            if (modal != targetModal) {
+                modal.classList.add('modalHidden');
+            }
+        })
     })
 });
 
-// The forEach loop adds the display none proeprty on each modal.
-// Then the targetModal toggle removes the display property from the corresponding modal.
-// I want a conditional that prevents the specified modal from having its displaly none property removed if its already opened.
+closeModal.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+        const targetModal = closeButton.parentElement;
+        targetModal.classList.add('modalHidden');
+    })
+})

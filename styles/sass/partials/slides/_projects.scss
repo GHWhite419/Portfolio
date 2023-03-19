@@ -53,8 +53,16 @@
         z-index: 10;
         background-color: white;
         opacity: 1;
+
+        i {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+
         p {
             margin: 1rem;
+            max-width: 75%;
         }
     }
 
@@ -66,7 +74,9 @@
     .modal2 {
         transform: translateX(-8rem);
         @include modalArrowRight;
-        &:after, &:before {
+
+        &:after,
+        &:before {
             top: 35%;
         }
     }

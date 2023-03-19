@@ -537,8 +537,14 @@ section {
   background-color: white;
   opacity: 1;
 }
+.projects .projectModal i {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
 .projects .projectModal p {
   margin: 1rem;
+  max-width: 75%;
 }
 .projects .modal1 {
   -webkit-transform: translateX(8rem);
