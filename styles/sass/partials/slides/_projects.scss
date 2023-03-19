@@ -1,3 +1,5 @@
+@use '../variables.scss' as *;
+
 .projects {
     background: url(../assets/blueStripe.png);
     background-size: 70rem;
@@ -30,38 +32,42 @@
         height: 100%;
     }
 
-    .projectInfo {
+    .projectButton {
         position: absolute;
-        transform: translateX(8rem);
+        bottom: .5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #00AEEF;
+        color: #FFF;
+        border: 1px solid black;
+        padding: 0.5rem 1.6rem;
+        border-radius: 1rem;
+    }
+
+    .modalHidden {
+        display: none;
+    }
+
+    .projectModal {
+        position: absolute;
         z-index: 10;
         background-color: white;
         opacity: 1;
-
-        &:after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 0;
-            z-index: 1;
-            border-style: solid;
-            border-color: transparent white;
-            border-width: 17px 20px 17px 0;
-            top: 50%;
-            left: -20px;
-            margin-top: -17px;
+        p {
+            margin: 1rem;
         }
-        &:before {
-            content: '';
-            position: absolute;
-            width: 0;
-            z-index: 0;
-            border-style: solid;
-            border-color: transparent #00afef;
-            border-width: 21px 24px 21px 0;
-            top: 50%;
-            left: -26px;
-            margin-top: -21px;
-            display: block;
+    }
+
+    .modal1 {
+        transform: translateX(8rem);
+        @include modalArrowLeft;
+    }
+
+    .modal2 {
+        transform: translateX(-8rem);
+        @include modalArrowRight;
+        &:after, &:before {
+            top: 35%;
         }
     }
 }

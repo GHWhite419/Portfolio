@@ -1,15 +1,8 @@
 // Here are global styles and variables I'm using for my project
 
 // Typographic styles
+@use './variables.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Oswald:wght@200&display=swap');
-
-$headerFont: 'Open Sans', sans-serif;
-$baseFont: 'Oswald', sans-serif;
-
-@mixin headerText {
-    font-family: $headerFont;
-    font-weight: 800;
-}
 
 html {
     font-family: $baseFont;
@@ -27,11 +20,6 @@ h1, h2 {
         font-size: 5rem;
     }
 }
-
-// Color variables
-$background: #FFF;
-$primary: #000;
-$secondary: #778899;
 
 // General styles
 .wrapper {

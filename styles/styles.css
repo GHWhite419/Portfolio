@@ -516,15 +516,35 @@ section {
 .projects img {
   height: 100%;
 }
-.projects .projectInfo {
+.projects .projectButton {
   position: absolute;
-  -webkit-transform: translateX(8rem);
-          transform: translateX(8rem);
+  bottom: 0.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #00AEEF;
+  color: #FFF;
+  border: 1px solid black;
+  padding: 0.5rem 1.6rem;
+  border-radius: 1rem;
+}
+.projects .modalHidden {
+  display: none;
+}
+.projects .projectModal {
+  position: absolute;
   z-index: 10;
   background-color: white;
   opacity: 1;
 }
-.projects .projectInfo:after {
+.projects .projectModal p {
+  margin: 1rem;
+}
+.projects .modal1 {
+  -webkit-transform: translateX(8rem);
+          transform: translateX(8rem);
+}
+.projects .modal1:after {
   content: "";
   position: absolute;
   display: block;
@@ -537,7 +557,7 @@ section {
   left: -20px;
   margin-top: -17px;
 }
-.projects .projectInfo:before {
+.projects .modal1:before {
   content: "";
   position: absolute;
   width: 0;
@@ -549,6 +569,39 @@ section {
   left: -26px;
   margin-top: -21px;
   display: block;
+}
+.projects .modal2 {
+  -webkit-transform: translateX(-8rem);
+          transform: translateX(-8rem);
+}
+.projects .modal2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: transparent white;
+  border-width: 17px 0 17px 20px;
+  top: 50%;
+  right: -20px;
+  margin-top: -17px;
+}
+.projects .modal2:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  z-index: 0;
+  border-style: solid;
+  border-color: transparent #00afef;
+  border-width: 21px 0 21px 24px;
+  top: 50%;
+  right: -26px;
+  margin-top: -21px;
+  display: block;
+}
+.projects .modal2:after, .projects .modal2:before {
+  top: 35%;
 }
 
 .contact {

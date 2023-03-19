@@ -1,6 +1,7 @@
 @use './partials/setup.scss';
 @use './partials/global.scss';
 @use './partials/slides.scss';
+@use './partials/variables.scss' as *;
 
 @use './partials/slides/intro.scss';
 @use './partials/slides/about.scss';
