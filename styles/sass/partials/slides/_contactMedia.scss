@@ -1,0 +1,25 @@
+.contact {
+    @media (min-width: 515px) {
+        textarea {
+            height: 8rem;
+        }
+    }
+
+    @media (min-width: 650px) {
+        h2 {
+            font-size: 5rem;
+        }
+        form label {
+            width: 49%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        overflow: hidden;
+        h2 {
+            margin: 0;
+            margin-top: -1rem;
+            text-align: right;
+        }
+    }
+}

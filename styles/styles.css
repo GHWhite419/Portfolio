@@ -655,12 +655,13 @@ section {
   background-size: 70rem;
   background-position-x: -3rem;
   background-position-y: -11rem;
+  overflow-y: scroll;
 }
 .contact h2 {
-  text-align: right;
-  margin-top: -2rem;
-  margin-bottom: 0;
   bottom: 0;
+  font-size: 2.6rem;
+  margin: 2rem 0;
+  text-align: center;
 }
 .contact form {
   display: -webkit-box;
@@ -684,8 +685,8 @@ section {
   margin-top: 0;
 }
 .contact form label {
-  width: 49%;
   padding-bottom: 1rem;
+  width: 100%;
 }
 .contact form label:last-of-type {
   width: 100%;
@@ -711,7 +712,7 @@ section {
   font-family: "Oswald", sans-serif;
   width: 100%;
   padding: 0.5rem;
-  height: 8rem;
+  height: 12rem;
   outline: none;
 }
 
@@ -925,5 +926,29 @@ section {
   .projects li {
     width: 30%;
     margin-top: 0;
+  }
+}
+
+@media (min-width: 515px) {
+  .contact textarea {
+    height: 8rem;
+  }
+}
+@media (min-width: 650px) {
+  .contact h2 {
+    font-size: 5rem;
+  }
+  .contact form label {
+    width: 49%;
+  }
+}
+@media (min-width: 1200px) {
+  .contact {
+    overflow: hidden;
+  }
+  .contact h2 {
+    margin: 0;
+    margin-top: -1rem;
+    text-align: right;
   }
 }

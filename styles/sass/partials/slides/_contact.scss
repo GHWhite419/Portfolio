@@ -5,12 +5,17 @@
     background-size: 70rem;
     background-position-x: -3rem;
     background-position-y: -11rem;
+    overflow-y: scroll;
 
     h2 {
-        text-align: right;
-        margin-top: -2rem;
-        margin-bottom: 0;
         bottom: 0;
+        font-size: 2.6rem;
+        margin: 2rem 0;
+        text-align: center;
+        // For widescreens
+        // text-align: right;
+        // margin-top: -2rem;
+        // margin-bottom: 0;
     }
 
     form {
@@ -31,8 +36,10 @@
         }
 
         label {
-            width: 49%;
             padding-bottom: 1rem;
+            width: 100%;
+            // For widescreen
+            // width: 49%;
         }
 
         label:last-of-type {
@@ -64,7 +71,7 @@
         font-family: $baseFont;
         width: 100%;
         padding: .5rem;
-        height: 8rem;
+        height: 12rem;
         outline: none;
     }
 }
