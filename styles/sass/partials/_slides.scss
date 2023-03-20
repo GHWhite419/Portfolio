@@ -1,4 +1,5 @@
 @use './variables.scss' as *;
+
 main {
     display: flex;
 }
@@ -27,6 +28,13 @@ section {
     z-index: 10;
     height: 0;
     bottom: 15%;
+    
+    .sliderDisable {
+        color: $secondary;
+        &:hover, &:focus {
+            color: $secondary;
+        }
+    }
 
     @media(min-width: 915px) {
         bottom: 50%;
@@ -46,47 +54,51 @@ section {
 .prevSlide {
     left: .5rem;
 
-    .imgContainer {
-        margin-right: -1.75rem;
-    }
-
-    img {
-        object-position: -1.25rem;
+    i {
+        color: $primary;
+        transition: .2s; 
     }
 }
 
 .nextSlide {
     right: .5rem;
 
-    .imgContainer {
-        margin-left: -1.75rem;
-    }
-
-    img {
-        object-position: 1.25rem;
+    i {
+        color: $primary;
+        transition: .2s; 
     }
 }
+
 
 .introColor {
-&:focus-visible, &:hover {
-    color: $introColor;
-}
+
+    &:focus-visible,
+    &:hover {
+        color: $introColor;
+    }
 }
 
 .aboutColor {
-    &:focus-visible, &:hover {
+
+    &:focus-visible,
+    &:hover {
         color: $aboutColor;
+        // filter: brightness(1.4);
     }
 }
 
 .projectsColor {
-    &:focus-visible, &:hover {
+
+    &:focus-visible,
+    &:hover {
         color: $projectsColor;
     }
 }
 
 .contactColor {
-    &:focus-visible, &:hover {
+
+    &:focus-visible,
+    &:hover {
         color: $contactColor;
     }
 }

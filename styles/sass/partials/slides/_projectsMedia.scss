@@ -10,11 +10,19 @@
         button {
             padding: .5rem 1rem;
         }
+
+        .modal3 {
+            transform: translateY(9rem);
+        }
     }
 
     @media (min-width: 425px) {
         .modal2 {
             transform: translateY(24rem);
+        }
+
+        .modal3 {
+            transform: translateY(17rem);
         }
     }
 
@@ -22,6 +30,7 @@
         h2 {
             font-size: 5rem;
         }
+
         .modal2 {
             transform: translateY(35rem);
         }
@@ -51,10 +60,23 @@
         .modal2 {
             @include modalArrowRight;
             transform: translate(-9rem, 0);
+
             &:before,
             &:after {
                 left: auto;
                 top: 25%;
+            }
+        }
+
+        .modal3 {
+            @include modalArrowLeft;
+            transform: translate(9rem, 5rem);
+
+            &:before,
+            &:after {
+                bottom: auto;
+                margin-left: 0;
+                top: 75%;
             }
         }
     }
@@ -63,6 +85,12 @@
 
     @media (min-width: 1200px) {
         overflow: hidden;
+
+        h3 {
+            position: absolute;
+            right: 6rem;
+            top: 0rem;
+        }
 
         li {
             width: 30%;

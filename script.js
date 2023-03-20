@@ -1,8 +1,8 @@
 // Slideshow/Carousel
 const slideShow = document.querySelectorAll('section');
 
-const prevSlide = document.querySelector('.prevSlide');
-const nextSlide = document.querySelector('.nextSlide');
+const prevSlide = document.querySelector('.prevSlide i');
+const nextSlide = document.querySelector('.nextSlide i');
 
 slideShow.forEach((slide, index) => {
     slide.style.transform = `translateX(${index * 100}%)`;
@@ -11,20 +11,36 @@ slideShow.forEach((slide, index) => {
 let currentSlide = 0;
 let lastSlide = slideShow.length - 1;
 
+const disableButton = () => {
+    if (currentSlide === 0) {
+        prevSlide.classList.add('sliderDisable');
+    }
+    else if (currentSlide === lastSlide) {
+        nextSlide.classList.add('sliderDisable');
+    }
+    else {
+        prevSlide.classList.remove('sliderDisable');
+        nextSlide.classList.remove('sliderDisable');
+    }
+}
+disableButton();
+
 prevSlide.addEventListener('click', function () {
     if (currentSlide != 0) {
         currentSlide--;
         openMenu.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         linkedIn.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         gitHub.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        prevSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        nextSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
     }
 
     slideShow.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
         slide.style.transition = '.3s';
-        // openMenu.classList.remove('introColor, aboutColor, projectsColor, contactColor');
     })
     slideColor();
+    disableButton();
 })
 
 nextSlide.addEventListener('click', function () {
@@ -33,6 +49,8 @@ nextSlide.addEventListener('click', function () {
         openMenu.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         linkedIn.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         gitHub.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        prevSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        nextSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
     }
 
     slideShow.forEach((slide, index) => {
@@ -40,6 +58,7 @@ nextSlide.addEventListener('click', function () {
         slide.style.transition = '.3s';
     })
     slideColor();
+    disableButton();
 })
 
 
@@ -89,11 +108,14 @@ links.forEach(link => {
         openMenu.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         linkedIn.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         gitHub.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        prevSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        nextSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         slideShow.forEach((slide, index) => {
             slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
             slide.style.transition = '.3s';
         })
         slideColor();
+        disableButton();
     })
 })
 
@@ -106,21 +128,33 @@ const slideColor = () => {
             openMenu.classList.add('introColor');
             linkedIn.classList.add('introColor');
             gitHub.classList.add('introColor');
+            prevSlide.classList.add('introColor');
+            nextSlide.classList.add('introColor');
+
             break;
         case 1:
             openMenu.classList.add('aboutColor');
             linkedIn.classList.add('aboutColor');
             gitHub.classList.add('aboutColor');
+            prevSlide.classList.add('aboutColor');
+            nextSlide.classList.add('aboutColor');
+
             break;
         case 2:
             openMenu.classList.add('projectsColor');
             linkedIn.classList.add('projectsColor');
             gitHub.classList.add('projectsColor');
+            prevSlide.classList.add('projectsColor');
+            nextSlide.classList.add('projectsColor');
+
             break;
         case 3:
             openMenu.classList.add('contactColor');
             linkedIn.classList.add('contactColor');
             gitHub.classList.add('contactColor');
+            prevSlide.classList.add('contactColor');
+            nextSlide.classList.add('contactColor');
+
             break;
     }
 }

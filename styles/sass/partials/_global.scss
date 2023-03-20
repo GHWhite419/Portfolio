@@ -42,6 +42,10 @@ a {
     color: $primary;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     height: 100vh;
 }
@@ -52,6 +56,7 @@ header {
     .openMenu {
         transition: .2s;
         color: $primary;
+
         &:hover {
             transform: scale(125%);
         }
@@ -78,15 +83,18 @@ header {
         text-align: center;
         font-family: $headerFont;
 
-        &:first-of-type:hover {
+        &:first-of-type:hover,
+        &:first-of-type:focus {
             color: $aboutColor;
         }
 
-        &:nth-of-type(2):hover {
+        &:nth-of-type(2):hover,
+        &:nth-of-type(2):focus {
             color: $projectsColor;
         }
 
-        &:last-of-type:hover {
+        &:last-of-type:hover,
+        &:last-of-type:focus {
             color: $contactColor;
         }
     }
@@ -95,7 +103,8 @@ header {
         position: absolute;
         top: 0;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $background;
         }
     }
@@ -118,6 +127,24 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: .85rem;
+
+    .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: .5rem;
+        align-items: center;
+        justify-content: center;
+        p {
+            padding: 0;
+        }
+        @media (min-height: 650px) {
+            flex-direction: column;
+            padding: 0;
+            p {
+                padding: .5rem;
+            }
+        }
+    }
 
     @media (min-width: 405px) {
         font-size: 1rem;

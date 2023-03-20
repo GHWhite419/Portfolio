@@ -7,26 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galen White</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 </head>
 
 <body>
     <header>
         <div class="navMenu">
             <ul>
-                <i class="fa-solid fa-x closeMenu"></i>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <i class="fa-solid fa-x closeMenu" TABINDEX="0"></i>
+                <li TABINDEX="0">About</li>
+                <li TABINDEX="0">Projects</li>
+                <li TABINDEX="0">Contact</li>
             </ul>
         </div>
-        <i aria-label="Site navigation - Open menu" class="fa-solid fa-bars openMenu"></i>
+        <i aria-label="Site navigation - Open menu" class="fa-solid fa-bars openMenu" TABINDEX="1"></i>
     </header>
     <main>
-        <button aria-label="Previous" class="prevSlide">
-            <div class="imgContainer">
-                <img src="../assets/xMark.png" aria-hidden="true">
-            </div>
-            Prev
+
+        <button aria-label="Previous section" class="prevSlide">
+            <i class="fa-solid fa-angle-left fa-2xl" aria-hidden="true" TABINDEX="2"></i>
         </button>
 
         <div class="slideshow">
@@ -93,9 +92,11 @@
             <section class="projects">
                 <div class="wrapper">
                     <h2>Projects</h2>
+                    <h3>Click/press a <span>project title</span> to learn more!</h3>
                     <ul>
                         <li class="project project1">
-                            <img src="./assets/projectDelicious.png" alt="Screenshot of a webpage displaying a collection of cocktails.">
+                            <img src="./assets/projectDelicious.png"
+                                alt="Screenshot of a webpage displaying a collection of cocktails.">
                             <button type="button" class="projectButton">Delicious</button>
                         </li>
                         <li class="projectModal modalHidden modal1">
@@ -108,17 +109,20 @@
                                 <li>Sass</li>
                             </ul>
                             <ul class="projectLinks">
-                                <li><a href="https://galenwhiteprojectonedelicious.netlify.app/" target="_blank" aria-label="Live site - Opens in new tab">Live
+                                <li><a href="https://galenwhiteprojectonedelicious.netlify.app/" target="_blank"
+                                        aria-label="Live site - Opens in new tab">Live
                                         site</a></li>
-                                <li><a href="https://github.com/GHWhite419/galenWhiteProjectOne"
-                                        target="_blank" aria-label="Repository - Opens in new tab">Repository</a></li>
+                                <li><a href="https://github.com/GHWhite419/galenWhiteProjectOne" target="_blank"
+                                        aria-label="Repository - Opens in new tab">Repository</a></li>
                             </ul>
                         </li>
 
                         <li class="project project2">
-                            <img src="./assets/projectMovies.png" alt="Screenshot of a webpage displaying a list with a series of movie titles.">
+                            <img src="./assets/projectMovies.png"
+                                alt="Screenshot of a webpage displaying a list with a series of movie titles.">
                             <button type="button" class="projectButton">WBW Movies</button>
                         </li>
+
                         <li class="projectModal modalHidden modal2">
                             <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
                             <p>Create your own personal list to track those movies you've always wanted to watch!
@@ -134,17 +138,39 @@
                                 <li>Firebase</li>
                             </ul>
                             <ul class="projectLinks">
-                                <li><a href="https://wbwmovies.netlify.app/" target="_blank" aria-label="Live site - Opens in new tab">Live site</a></li>
-                                <li><a href="https://github.com/WattBowers/WBWMovies" target="_blank" aria-label="Repository - Opens in new tab">Repository</a>
+                                <li><a href="https://wbwmovies.netlify.app/" target="_blank"
+                                        aria-label="Live site - Opens in new tab">Live site</a></li>
+                                <li><a href="https://github.com/WattBowers/WBWMovies" target="_blank"
+                                        aria-label="Repository - Opens in new tab">Repository</a>
                                 </li>
                             </ul>
                         </li>
+
                         <li class="project project3">
-                            <img src="./assets/projectDelicious.png" alt="">
-                            <button type="button" class="projectButton">Coming soon!</button>
+                            <img src="./assets/projectBikerland.png"
+                                alt="Screenshot of a webpage containg a backdrop of a bicycle.">
+                            <button type="button" class="projectButton">Bikerland</button>
                         </li>
+
+                        <li class="projectModal modalHidden modal3">
+                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
+                            <p>A single page PSD conversion featuring a functional hamburger menu, full responsiveness,
+                                and accessibility practices.</p>
+                            <ul class="projectSkills">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <ul class="projectLinks">
+                                <li><a href="https://galenwhitebikerland.netlify.app" target="_blank"
+                                        aria-label="Live site - Opens in new tab">Live
+                                        site</a></li>
+                                <li><a href="https://github.com/GHWhite419/junoBootcampAssignment1BikerLand"
+                                        target="_blank" aria-label="Repository - Opens in new tab">Repository</a></li>
+                            </ul>
+                        </li>
+
                         <li class="project project4">
-                            <img src="./assets/projectMovies.png" alt="">
+                            <img src="./assets/blueStripe.png" alt="No p">
                             <button type="button" class="projectButton">Coming soon!</button>
                         </li>
                     </ul>
@@ -176,20 +202,20 @@
             </section>
         </div>
 
-        <button class="nextSlide">
-            Next
-            <div class="imgContainer">
-                <img src="../assets/xMark.png" aria-hidden="true">
-            </div>
+        <button class="nextSlide" aria-label="Next section">
+            <i class="fa-solid fa-angle-right fa-2xl" aria-hidden="true" TABINDEX="2"></i>
         </button>
+
     </main>
     <footer>
         <div class="wrapper">
             <ul class="social">
                 <li><a href="https://www.linkedin.com/in/galenhwhite/" target="_blank"
-                        aria-label="Galen's LinkedIn - Opens in new tab"><i class="fa-brands fa-linkedin"></i></a></li>
+                        aria-label="Galen's LinkedIn - Opens in new tab"><i class="fa-brands fa-linkedin"
+                            TABINDEX="0"></i></a></li>
                 <li><a href="https://github.com/GHWhite419/" target="_blank"
-                        aria-label="Galen's GitHub - Opens in new tab"><i class="fa-brands fa-github"></i></a>
+                        aria-label="Galen's GitHub - Opens in new tab"><i class="fa-brands fa-github"
+                            TABINDEX="0"></i></a>
                 </li>
             </ul>
             <p>Created by Galen White. Design credits: <a href="https://themeforest.net/user/moontheme">moontheme.</a>

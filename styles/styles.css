@@ -270,6 +270,10 @@ a {
   color: #000;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   height: 100vh;
 }
@@ -314,20 +318,20 @@ header li {
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
-header li:first-of-type:hover {
+header li:first-of-type:hover, header li:first-of-type:focus {
   color: #5C4971;
 }
-header li:nth-of-type(2):hover {
+header li:nth-of-type(2):hover, header li:nth-of-type(2):focus {
   color: #00AEEF;
 }
-header li:last-of-type:hover {
+header li:last-of-type:hover, header li:last-of-type:focus {
   color: #3FC35F;
 }
 header .closeMenu {
   position: absolute;
   top: 0;
 }
-header .closeMenu:hover {
+header .closeMenu:hover, header .closeMenu:focus {
   color: #FFF;
 }
 header .navOpen {
@@ -347,6 +351,37 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 0.85rem;
+}
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .wrapper p {
+  padding: 0;
+}
+@media (min-height: 650px) {
+  footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  footer .wrapper p {
+    padding: 0.5rem;
+  }
 }
 @media (min-width: 405px) {
   footer {
@@ -431,6 +466,15 @@ section {
   height: 0;
   bottom: 15%;
 }
+.prevSlide .sliderDisable,
+.nextSlide .sliderDisable {
+  color: #778899;
+}
+.prevSlide .sliderDisable:hover, .prevSlide .sliderDisable:focus,
+.nextSlide .sliderDisable:hover,
+.nextSlide .sliderDisable:focus {
+  color: #778899;
+}
 @media (min-width: 915px) {
   .prevSlide,
   .nextSlide {
@@ -451,23 +495,19 @@ section {
 .prevSlide {
   left: 0.5rem;
 }
-.prevSlide .imgContainer {
-  margin-right: -1.75rem;
-}
-.prevSlide img {
-  -o-object-position: -1.25rem;
-     object-position: -1.25rem;
+.prevSlide i {
+  color: #000;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .nextSlide {
   right: 0.5rem;
 }
-.nextSlide .imgContainer {
-  margin-left: -1.75rem;
-}
-.nextSlide img {
-  -o-object-position: 1.25rem;
-     object-position: 1.25rem;
+.nextSlide i {
+  color: #000;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .introColor:focus-visible, .introColor:hover {
@@ -598,6 +638,19 @@ section {
   font-size: 2.5rem;
   text-align: center;
 }
+.projects h3 {
+  text-align: center;
+}
+.projects h3 span {
+  color: #FFF;
+  background-color: #00AEEF;
+  color: #FFF;
+  border: 1px solid #000;
+  padding: 0.5rem 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  text-transform: capitalize;
+}
 .projects ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -610,6 +663,10 @@ section {
   margin: 0;
   margin-bottom: 3rem;
 }
+.projects ul .modalHidden {
+  -webkit-transform: translateX(400%);
+          transform: translateX(400%);
+}
 .projects li {
   margin: 0.75rem 1rem;
   border: 4px solid;
@@ -620,6 +677,7 @@ section {
 }
 .projects img {
   height: 100%;
+  max-height: 11rem;
 }
 .projects .projectButton {
   position: absolute;
@@ -629,18 +687,17 @@ section {
           transform: translateX(-50%);
   background-color: #00AEEF;
   color: #FFF;
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 0.5rem 0.6rem;
   border-radius: 1rem;
-}
-.projects .modalHidden {
-  display: none;
 }
 .projects .projectModal {
   position: absolute;
   z-index: 10;
-  background-color: white;
+  background-color: #FFF;
   opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .projects .projectModal ul {
   margin-bottom: 0;
@@ -733,6 +790,36 @@ section {
   margin-left: -20px;
   display: block;
 }
+.projects .modal3 {
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+.projects .modal3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  border-width: 20px 17px 0;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -17px;
+}
+.projects .modal3:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  z-index: 0;
+  border-style: solid;
+  border-color: #00afef transparent;
+  border-width: 23px 20px 0;
+  bottom: -24.5px;
+  left: 50%;
+  margin-left: -20px;
+  display: block;
+}
 
 .contact {
   background: url(../assets/greenStripe.png);
@@ -763,6 +850,7 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 2rem;
+  margin-bottom: 3rem;
 }
 .contact form h3 {
   text-align: center;
@@ -913,11 +1001,19 @@ section {
   .projects button {
     padding: 0.5rem 1rem;
   }
+  .projects .modal3 {
+    -webkit-transform: translateY(9rem);
+            transform: translateY(9rem);
+  }
 }
 @media (min-width: 425px) {
   .projects .modal2 {
     -webkit-transform: translateY(24rem);
             transform: translateY(24rem);
+  }
+  .projects .modal3 {
+    -webkit-transform: translateY(17rem);
+            transform: translateY(17rem);
   }
 }
 @media (min-width: 625px) {
@@ -1004,10 +1100,50 @@ section {
     left: auto;
     top: 25%;
   }
+  .projects .modal3 {
+    -webkit-transform: translate(9rem, 5rem);
+            transform: translate(9rem, 5rem);
+  }
+  .projects .modal3:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent white;
+    border-width: 17px 20px 17px 0;
+    top: 50%;
+    left: -20px;
+    margin-top: -17px;
+  }
+  .projects .modal3:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    z-index: 0;
+    border-style: solid;
+    border-color: transparent #00afef;
+    border-width: 21px 24px 21px 0;
+    top: 50%;
+    left: -26px;
+    margin-top: -21px;
+    display: block;
+  }
+  .projects .modal3:before, .projects .modal3:after {
+    bottom: auto;
+    margin-left: 0;
+    top: 75%;
+  }
 }
 @media (min-width: 1200px) {
   .projects {
     overflow: hidden;
+  }
+  .projects h3 {
+    position: absolute;
+    right: 6rem;
+    top: 0rem;
   }
   .projects li {
     width: 30%;
