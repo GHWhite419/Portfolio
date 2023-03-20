@@ -11,9 +11,15 @@
 
 <body>
     <header>
-        <div class="wrapper">
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
+        <div class="navMenu">
+            <ul>
+                <i class="fa-solid fa-x closeMenu"></i>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
         </div>
+        <i aria-label="Site navigation - Open menu" class="fa-solid fa-bars openMenu"></i>
     </header>
     <main>
         <button aria-label="Previous" class="prevSlide">
@@ -29,7 +35,8 @@
                 <div class="wrapper">
                     <h1>Galen White</h1>
                     <div class="imgContainer">
-                        <img src="./assets/GWhite-4744.jpg" alt="">
+                        <img src="./assets/GWhite-4744.jpg"
+                            alt="Headshot of Galen White, a pretty cool new web developer from Brampton.">
                     </div>
                 </div>
             </section>
@@ -54,14 +61,30 @@
                     <div class="skillList">
                         <h3>My skillset</h3>
                         <ul>
-                            <li><i class="fa-brands fa-html5 fa-fw"></i>HTML</li>
-                            <li><i class="fa-brands fa-css3-alt fa-fw"></i>CSS</li>
-                            <li><i class="fa-brands fa-sass fa-fw"></i>SCSS</li>
-                            <li><i class="fa-brands fa-square-js fa-fw"></i>Javascript</li>
-                            <li><i class="fa-solid fa-database fa-fw"></i>Firebase</li>
-                            <li><i class="fa-brands fa-react fa-fw"></i>React</li>
-                            <li><i class="fa-brands fa-git-alt fa-fw"></i>Git</li>
-                            <li><i class="fa-brands fa-github fa-fw"></i>Github</li>
+                            <li>
+                                <i class="fa-brands fa-html5 fa-fw" aria-hidden="true"></i>HTML
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-css3-alt fa-fw" aria-hidden="true"></i>CSS
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-sass fa-fw" aria-hidden="true"></i>SCSS
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-square-js fa-fw" aria-hidden="true"></i>Javascript
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-database fa-fw" aria-hidden="true"></i>Firebase
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-react fa-fw" aria-hidden="true"></i>React
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-git-alt fa-fw" aria-hidden="true"></i>Git
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i>Github
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -72,11 +95,11 @@
                     <h2>Projects</h2>
                     <ul>
                         <li class="project project1">
-                            <img src="./assets/projectDelicious.png" alt="">
+                            <img src="./assets/projectDelicious.png" alt="Screenshot of a webpage displaying a collection of cocktails.">
                             <button type="button" class="projectButton">Delicious</button>
                         </li>
                         <li class="projectModal modalHidden modal1">
-                            <i class="fa-solid fa-x fa-xs closeModal"></i>
+                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
                             <p>Explore three pages of a PSD conversion, featuring total responsiveness and accessibile
                                 design.</p>
                             <ul class="projectSkills">
@@ -85,17 +108,19 @@
                                 <li>Sass</li>
                             </ul>
                             <ul class="projectLinks">
-                                <li><a href="https://galenwhiteprojectonedelicious.netlify.app/" target="_blank">Live site</a></li>
-                                <li><a href="https://github.com/GHWhite419/galenWhiteProjectOne" target="_blank">Repository</a></li>
+                                <li><a href="https://galenwhiteprojectonedelicious.netlify.app/" target="_blank" aria-label="Live site - Opens in new tab">Live
+                                        site</a></li>
+                                <li><a href="https://github.com/GHWhite419/galenWhiteProjectOne"
+                                        target="_blank" aria-label="Repository - Opens in new tab">Repository</a></li>
                             </ul>
                         </li>
 
                         <li class="project project2">
-                            <img src="./assets/projectMovies.png" alt="">
+                            <img src="./assets/projectMovies.png" alt="Screenshot of a webpage displaying a list with a series of movie titles.">
                             <button type="button" class="projectButton">WBW Movies</button>
                         </li>
                         <li class="projectModal modalHidden modal2">
-                            <i class="fa-solid fa-x fa-xs closeModal"></i>
+                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
                             <p>Create your own personal list to track those movies you've always wanted to watch!
                                 Features user authentication and a live database.
                                 <br>
@@ -109,8 +134,9 @@
                                 <li>Firebase</li>
                             </ul>
                             <ul class="projectLinks">
-                                <li><a href="https://wbwmovies.netlify.app/" target="_blank">Live site</a></li>
-                                <li><a href="https://github.com/WattBowers/WBWMovies" target="_blank">Repository</a></li>
+                                <li><a href="https://wbwmovies.netlify.app/" target="_blank" aria-label="Live site - Opens in new tab">Live site</a></li>
+                                <li><a href="https://github.com/WattBowers/WBWMovies" target="_blank" aria-label="Repository - Opens in new tab">Repository</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="project project3">
@@ -128,18 +154,21 @@
             <section class="contact">
                 <div class="wrapper">
                     <h2>Contact</h2>
-                    <form action="submit">
+                    <form action="https://formspree.io/f/xqkodadl" method="post">
                         <h3>Let's get in touch!</h3>
                         <label for="name">
-                            <input type="text" id="name" placeholder="Your name">
+                            <span class="sr-only">Your name</span>
+                            <input type="text" name="name" id=" name" placeholder="Your name">
                         </label>
-                        <label for="">
-                            <input type="email" id="email" placeholder="Your email">
+                        <label for="email">
+                            <span class="sr-only">Your email</span>
+                            <input type="email" name="email" id="email" placeholder="Your email">
                         </label>
                         <label for="message">
-                            <textarea name="" id="message" placeholder="Your message"></textarea>
+                            <span class="sr-only">Your message</span>
+                            <textarea name="message" id="message" placeholder="Your message"></textarea>
                         </label>
-                        <button type="button">
+                        <button type="submit" aria-label="Send message">
                             <i class="fa-sharp fa-solid fa-right-long"></i>
                         </button>
                     </form>
@@ -157,9 +186,10 @@
     <footer>
         <div class="wrapper">
             <ul class="social">
-                <li><a href="https://www.linkedin.com/in/galenhwhite/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/GHWhite419/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <li><a href="https://www.linkedin.com/in/galenhwhite/" target="_blank"
+                        aria-label="Galen's LinkedIn - Opens in new tab"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/GHWhite419/" target="_blank"
+                        aria-label="Galen's GitHub - Opens in new tab"><i class="fa-brands fa-github"></i></a>
                 </li>
             </ul>
             <p>Created by Galen White. Design credits: <a href="https://themeforest.net/user/moontheme">moontheme.</a>

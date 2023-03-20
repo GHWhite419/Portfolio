@@ -1,5 +1,3 @@
-// Here are global styles and variables I'm using for my project
-
 // Typographic styles
 @use './variables.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Oswald:wght@200&display=swap');
@@ -8,7 +6,8 @@ html {
     font-family: $baseFont;
 }
 
-h1, h2 {
+h1,
+h2 {
     @include headerText;
     text-transform: uppercase;
     font-size: 3.5rem;
@@ -50,6 +49,61 @@ body {
 header {
     height: 5%;
 
+    .openMenu {
+        transition: .2s;
+        color: $primary;
+        &:hover {
+            transform: scale(125%);
+        }
+    }
+
+    .navMenu {
+        height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary;
+        height: 100vh;
+        z-index: 20;
+        position: absolute;
+        width: 100vw;
+        transform: translateY(-100%);
+        transition: .3s;
+    }
+
+    li {
+        padding: 2rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $headerFont;
+
+        &:first-of-type:hover {
+            color: $aboutColor;
+        }
+
+        &:nth-of-type(2):hover {
+            color: $projectsColor;
+        }
+
+        &:last-of-type:hover {
+            color: $contactColor;
+        }
+    }
+
+    .closeMenu {
+        position: absolute;
+        top: 0;
+
+        &:hover {
+            color: $background;
+        }
+    }
+
+    .navOpen {
+        transform: translateY(0);
+    }
+
     i {
         padding-top: 1rem;
         position: absolute;
@@ -63,9 +117,18 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: .8rem;
+    font-size: .85rem;
+
     @media (min-width: 405px) {
         font-size: 1rem;
+    }
+
+    i {
+        transition: .2s;
+
+        &:hover {
+            transform: scale(125%);
+        }
     }
 }
 

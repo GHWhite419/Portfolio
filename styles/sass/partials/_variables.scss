@@ -7,6 +7,13 @@ $background: #FFF;
 $primary: #000;
 $secondary: #778899;
 
+// Slide colors
+$introColor: #F7484E;
+$aboutColor: #5C4971;
+$projectsColor: #00AEEF;
+$contactColor: #3FC35F;
+
+
 @mixin headerText {
     font-family: $headerFont;
     font-weight: 800;

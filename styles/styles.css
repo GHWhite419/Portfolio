@@ -232,7 +232,8 @@ html {
   font-family: "Oswald", sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
@@ -242,7 +243,8 @@ h1, h2 {
   bottom: 6rem;
 }
 @media (min-width: 625px) {
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 5rem;
   }
 }
@@ -275,6 +277,63 @@ body {
 header {
   height: 5%;
 }
+header .openMenu {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #000;
+}
+header .openMenu:hover {
+  -webkit-transform: scale(125%);
+          transform: scale(125%);
+}
+header .navMenu {
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #778899;
+  height: 100vh;
+  z-index: 20;
+  position: absolute;
+  width: 100vw;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header li {
+  padding: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+header li:first-of-type:hover {
+  color: #5C4971;
+}
+header li:nth-of-type(2):hover {
+  color: #00AEEF;
+}
+header li:last-of-type:hover {
+  color: #3FC35F;
+}
+header .closeMenu {
+  position: absolute;
+  top: 0;
+}
+header .closeMenu:hover {
+  color: #FFF;
+}
+header .navOpen {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 header i {
   padding-top: 1rem;
   position: absolute;
@@ -287,12 +346,20 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 @media (min-width: 405px) {
   footer {
     font-size: 1rem;
   }
+}
+footer i {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+footer i:hover {
+  -webkit-transform: scale(125%);
+          transform: scale(125%);
 }
 
 i {
@@ -401,6 +468,22 @@ section {
 .nextSlide img {
   -o-object-position: 1.25rem;
      object-position: 1.25rem;
+}
+
+.introColor:focus-visible, .introColor:hover {
+  color: #F7484E;
+}
+
+.aboutColor:focus-visible, .aboutColor:hover {
+  color: #5C4971;
+}
+
+.projectsColor:focus-visible, .projectsColor:hover {
+  color: #00AEEF;
+}
+
+.contactColor:focus-visible, .contactColor:hover {
+  color: #3FC35F;
 }
 
 .intro {
@@ -529,10 +612,10 @@ section {
 }
 .projects li {
   margin: 0.75rem 1rem;
-  border: 4px solid #00AEEF;
-  border-radius: 4px;
+  border: 4px solid;
+  border-radius: 5px;
+  border-color: #00AEEF;
   opacity: 0.85;
-  background-color: #00AEEF;
   position: relative;
 }
 .projects img {
@@ -582,6 +665,7 @@ section {
   text-align: center;
   width: auto;
   padding: 0.2rem 0.6rem;
+  background-color: #00AEEF;
 }
 .projects .projectLinks li a {
   color: #FFF;
@@ -664,6 +748,12 @@ section {
   text-align: center;
 }
 .contact form {
+  opacity: 0.85;
+  background-color: #FFF;
+  padding: 1rem;
+  border: 4px solid;
+  border-radius: 5px;
+  border-color: #3FC35F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,11 +762,7 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 4px solid #3fc35f;
-  border-radius: 8px;
-  background-color: white;
   padding: 1rem 2rem;
-  opacity: 0.85;
 }
 .contact form h3 {
   text-align: center;
