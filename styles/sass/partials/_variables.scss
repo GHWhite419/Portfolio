@@ -83,3 +83,62 @@ $secondary: #778899;
         display: block;
     }
 }
+
+
+@mixin modalArrowTop {
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-color: #ffffff transparent;
+        border-width: 0 17px 20px;
+        top: -20px;
+        left: 50%;
+        margin-left: -17px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        z-index: 0;
+        border-style: solid;
+        border-color: #00afef transparent;
+        border-width: 0 20px 23px;
+        top: -24.5px;
+        left: 50%;
+        margin-left: -20px;
+        display: block;
+    }
+}
+
+@mixin modalArrowBottom {
+    :after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-color: #ffffff transparent;
+        border-width: 20px 17px 0;
+        bottom: -20px;
+        left: 50%;
+        margin-left: -17px;
+    }
+    :before {
+        content: '';
+        position: absolute;
+        width: 0;
+        z-index: 0;
+        border-style: solid;
+        border-color: #00afef transparent;
+        border-width: 23px 20px 0;
+        bottom: -24.5px;
+        left: 50%;
+        margin-left: -20px;
+        display: block;
+    }    
+}

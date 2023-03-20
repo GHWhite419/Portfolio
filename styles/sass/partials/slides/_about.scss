@@ -9,7 +9,7 @@ $aboutColor: #5C4971;
     overflow: scroll;
 
     h2 {
-        margin-top: 7rem; // Remove for wide screen
+        margin-top: 7rem;
         margin-bottom: -5rem;
         text-align: center;
     }
@@ -34,10 +34,6 @@ $aboutColor: #5C4971;
     }
 
     .skillList {
-        // Desktop/wide screen styles
-        // position: absolute;
-        // top: 1rem;
-        // right: 6rem;
         @include contentBox;
         border-color: $aboutColor;
         margin: auto;

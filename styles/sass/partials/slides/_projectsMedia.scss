@@ -1,0 +1,72 @@
+@use '../variables.scss' as *;
+
+.projects {
+    @media (min-width: 375px) {
+        h2 {
+            padding-top: 4rem;
+            font-size: 3rem;
+        }
+
+        button {
+            padding: .5rem 1rem;
+        }
+    }
+
+    @media (min-width: 425px) {
+        .modal2 {
+            transform: translateY(24rem);
+        }
+    }
+
+    @media (min-width: 625px) {
+        h2 {
+            font-size: 5rem;
+        }
+        .modal2 {
+            transform: translateY(35rem);
+        }
+    }
+
+    @media (min-width: 750px) {
+        h2 {
+            padding-top: 1rem;
+            text-align: left;
+        }
+
+        li {
+            width: 43%;
+        }
+
+        .modal1 {
+            // transform: translate(-8rem, 10rem);
+            @include modalArrowLeft;
+            transform: translate(8rem, -1rem);
+
+            &:before,
+            &:after {
+                margin-left: 0;
+            }
+        }
+
+        .modal2 {
+            @include modalArrowRight;
+            transform: translate(-9rem, 0);
+            &:before,
+            &:after {
+                left: auto;
+                top: 25%;
+            }
+        }
+    }
+
+    @media(min-width: 920px) {}
+
+    @media (min-width: 1200px) {
+        overflow: hidden;
+
+        li {
+            width: 30%;
+            margin-top: 0;
+        }
+    }
+}
