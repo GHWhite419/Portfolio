@@ -14,6 +14,16 @@
         .modal3 {
             transform: translateY(9rem);
         }
+
+        .modal4 {
+            transform: translateY(16rem);
+        }
+    }
+
+    @media(min-width: 400px) {
+        .modal4 {
+            transform: translateY(22rem);
+        }
     }
 
     @media (min-width: 425px) {
@@ -23,6 +33,10 @@
 
         .modal3 {
             transform: translateY(17rem);
+        }
+
+        .modal4 {
+            transform: translateY(28rem);
         }
     }
 
@@ -79,9 +93,24 @@
                 top: 75%;
             }
         }
+
+        .modal4 {
+            @include modalArrowRight;
+            transform: translate(-8rem, 5rem);
+
+            &:before,
+            &:after {
+                bottom: auto;
+                left: auto;
+            }
+        }
     }
 
-    @media(min-width: 920px) {}
+    @media (min-width: 780px) {
+        .modal4 {
+            transform: translate(-8rem, 9rem);
+        }
+    }
 
     @media (min-width: 1200px) {
         overflow: hidden;

@@ -130,4 +130,9 @@
         @include modalArrowBottom;
         transform: translateY(3rem);
     }
+
+    .modal4 {
+        @include modalArrowBottom;
+        transform: translateY(11rem);
+    }
 }
