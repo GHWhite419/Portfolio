@@ -1,16 +1,20 @@
-// Slideshow/Carousel
+// ** Slideshow/Carousel
+// The following variables initially select the 4 big sections themselves, as well as the buttons which will be used to navigate between them.
 const slideShow = document.querySelectorAll('section');
 
 const prevSlide = document.querySelector('.prevSlide i');
 const nextSlide = document.querySelector('.nextSlide i');
 
+// This loop positions the 4 sections side-by-side horizontally, with all but the active slide pushed off screen. The style.transform method uses the "index" argument to position eaah element appropriately, displaying the "intro" section as the first one by default. 
 slideShow.forEach((slide, index) => {
     slide.style.transform = `translateX(${index * 100}%)`;
 });
 
+// This code block prevents the user from sliding outside of the border sections of the slideshow (ie, before first slide and after last slide).
+// First I declare currentSlide as 0, simply to initialize this process. I also declare lastSlide as the fourth section using slideShow's length so that I have a clearly defined boundary.
 let currentSlide = 0;
 let lastSlide = slideShow.length - 1;
-
+// Lastly, this function adds a "sliderDisable" class to the navigation buttons if our current slide is either the first or last section. This class dulls out the colors to indicate their status as being un-usable (I will need to tweak its accessibility features so it's not selectable at all.)
 const disableButton = () => {
     if (currentSlide === 0) {
         prevSlide.classList.add('sliderDisable');
@@ -62,7 +66,7 @@ nextSlide.addEventListener('click', function () {
 })
 
 
-// Project modal popups
+// ** Project modal popups
 const projectButton = document.querySelectorAll('.projectButton');
 const projectModal = document.querySelectorAll('.projectModal');
 const closeModal = document.querySelectorAll('.closeModal');
@@ -88,7 +92,7 @@ closeModal.forEach(closeButton => {
 })
 
 
-// Nav menu
+// ** Nav menu
 const openMenu = document.querySelector('.openMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const navMenu = document.querySelector('.navMenu');
@@ -119,7 +123,7 @@ links.forEach(link => {
     })
 })
 
-// Dynamic hover styles
+// ** Dynamic hover styles
 const linkedIn = document.querySelector('footer .fa-linkedin');
 const gitHub = document.querySelector('footer .fa-github');
 const slideColor = () => {
@@ -161,7 +165,7 @@ const slideColor = () => {
 slideColor();
 
 
-// Clear email form
+// ** Clear email form
 window.onbeforeunload = () => {
     for (const form of document.getElementsByTagName('form')) {
         form.reset();
