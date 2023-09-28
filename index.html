@@ -1,246 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galen White</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-</head>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="navMenu">
-            <ul>
-                <i class="fa-solid fa-x closeMenu" TABINDEX="0"></i>
-                <li TABINDEX="0">About</li>
-                <li TABINDEX="0">Projects</li>
-                <li TABINDEX="0">Contact</li>
-            </ul>
-        </div>
-        <i aria-label="Site navigation - Open menu" class="fa-solid fa-bars openMenu" TABINDEX="1"></i>
+      <div class="navMenu">
+        <ul>
+          <i class="fa-solid fa-x closeMenu" TABINDEX="0"></i>
+          <li tabindex="0">About</li>
+          <li tabindex="0">Projects</li>
+          <li tabindex="0">Contact</li>
+        </ul>
+      </div>
+      <i
+        aria-label="Site navigation - Open menu"
+        class="fa-solid fa-bars openMenu"
+        TABINDEX="1"
+      ></i>
     </header>
     <main>
+      <button aria-label="Previous section" class="prevSlide">
+        <i
+          class="fa-solid fa-angle-left fa-2xl"
+          aria-hidden="true"
+          TABINDEX="2"
+        ></i>
+      </button>
 
-        <button aria-label="Previous section" class="prevSlide">
-            <i class="fa-solid fa-angle-left fa-2xl" aria-hidden="true" TABINDEX="2"></i>
-        </button>
+      <div class="slideshow">
+        <section class="intro">
+          <div class="wrapper">
+            <h1>Galen White</h1>
+            <div class="imgContainer">
+              <img
+                src="./assets/GWhite-4744.jpg"
+                alt="Headshot of Galen White, a pretty cool new web developer from Brampton."
+              />
+            </div>
+          </div>
+        </section>
 
-        <div class="slideshow">
+        <section class="about">
+          <div class="wrapper">
+            <h2>About me</h2>
+            <div class="bio">
+              <p>
+                Howdy! I'm a Front-End developer from Brampton, Ontario, and a
+                graduate of Juno College of Technology. I use my front-end tech
+                stack of HTML, CSS, Javascript and more to create beautiful,
+                functional websites that emphasize responsiveness and
+                accessibility.
+              </p>
 
-            <section class="intro">
-                <div class="wrapper">
-                    <h1>Galen White</h1>
-                    <div class="imgContainer">
-                        <img src="./assets/GWhite-4744.jpg"
-                            alt="Headshot of Galen White, a pretty cool new web developer from Brampton.">
-                    </div>
-                </div>
-            </section>
+              <p>
+                Beyond coding, I fancy myself a jack-of-all-trades, expanding my
+                skillset with stuff like Brazilian Jiu Jitsu, guitar, acting, and
+                picking up new languages (Я говорю мало по-Русски!). But
+                ultimately, I love the simple things in life: video games,
+                tabletop gaming, snuggles with my cat, and watching my Chicago
+                Bears disappoint me every year.
+              </p>
+            </div>
+            <div class="skillList">
+              <h3>My skillset</h3>
+              <ul>
+                <li>
+                  <i class="fa-brands fa-html5 fa-fw" aria-hidden="true"></i
+                  >HTML
+                </li>
+                <li>
+                  <i class="fa-brands fa-css3-alt fa-fw" aria-hidden="true"></i
+                  >CSS
+                </li>
+                <li>
+                  <i class="fa-brands fa-sass fa-fw" aria-hidden="true"></i>SCSS
+                </li>
+                <li>
+                  <i class="fa-brands fa-square-js fa-fw" aria-hidden="true"></i
+                  >Javascript
+                </li>
+                <li>
+                  <i class="fa-solid fa-database fa-fw" aria-hidden="true"></i
+                  >Firebase
+                </li>
+                <li>
+                  <i class="fa-brands fa-react fa-fw" aria-hidden="true"></i
+                  >React
+                </li>
+                <li>
+                  <i class="fa-brands fa-git-alt fa-fw" aria-hidden="true"></i
+                  >Git
+                </li>
+                <li>
+                  <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i
+                  >Github
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-            <section class="about">
-                <div class="wrapper">
-                    <h2>About me</h2>
-                    <div class="bio">
-                        <p>Howdy! I'm a Front-End developer from Brampton, Ontario, and a graduate of Juno College of
-                            Technology. I use my front-end tech stack of HTML, CSS, Javascript and more to create
-                            beautiful,
-                            functional websites that emphasize responsiveness and accessibility.</p>
+        <section class="projects">
+          <div class="wrapper">
+            <h2>Projects</h2>
+            <h3>Click/press a <span>project title</span> to learn more!</h3>
+            <ul>
+              <li class="project project1">
+                <img
+                  src="./assets/projectDelicious.png"
+                  alt="Screenshot of a webpage displaying a collection of cocktails."
+                />
+                <button type="button" class="projectButton">Delicious</button>
+              </li>
+              <li class="projectModal modalHidden modal1">
+                <i
+                  class="fa-solid fa-x fa-xs closeModal"
+                  aria-label="Close this pop-up."
+                ></i>
+                <p>
+                  Explore three pages of a PSD conversion, featuring total
+                  responsiveness and accessibile design.
+                </p>
+                <ul class="projectSkills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Sass</li>
+                </ul>
+                <ul class="projectLinks">
+                  <li>
+                    <a
+                      href="https://galenwhiteprojectonedelicious.netlify.app/"
+                      target="_blank"
+                      aria-label="Live site - Opens in new tab"
+                      >Live site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/GHWhite419/galenWhiteProjectOne"
+                      target="_blank"
+                      aria-label="Repository - Opens in new tab"
+                      >Repository</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                        <p>Beyond coding, I fancy myself a jack-of-all-trades, expanding my skilset with stuff like
-                            Brazilian Jiu Jitsu, guitar, acting, and picking up new languages (and not just code based -
-                            Я
-                            говорю мало по-Русски!). But ultimately, I love the simple things in life: video games,
-                            tabletop
-                            gaming, snuggles with my cat, and watching my Chicago Bears disappoint me every year.
-                        </p>
-                    </div>
-                    <div class="skillList">
-                        <h3>My skillset</h3>
-                        <ul>
-                            <li>
-                                <i class="fa-brands fa-html5 fa-fw" aria-hidden="true"></i>HTML
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-css3-alt fa-fw" aria-hidden="true"></i>CSS
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-sass fa-fw" aria-hidden="true"></i>SCSS
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-square-js fa-fw" aria-hidden="true"></i>Javascript
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-database fa-fw" aria-hidden="true"></i>Firebase
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-react fa-fw" aria-hidden="true"></i>React
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-git-alt fa-fw" aria-hidden="true"></i>Git
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i>Github
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+              <li class="project project2">
+                <img
+                  src="./assets/projectMovies.png"
+                  alt="Screenshot of a webpage displaying a list with a series of movie titles."
+                />
+                <button type="button" class="projectButton">WBW Movies</button>
+              </li>
 
-            <section class="projects">
-                <div class="wrapper">
-                    <h2>Projects</h2>
-                    <h3>Click/press a <span>project title</span> to learn more!</h3>
-                    <ul>
-                        <li class="project project1">
-                            <img src="./assets/projectDelicious.png"
-                                alt="Screenshot of a webpage displaying a collection of cocktails.">
-                            <button type="button" class="projectButton">Delicious</button>
-                        </li>
-                        <li class="projectModal modalHidden modal1">
-                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
-                            <p>Explore three pages of a PSD conversion, featuring total responsiveness and accessibile
-                                design.</p>
-                            <ul class="projectSkills">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Sass</li>
-                            </ul>
-                            <ul class="projectLinks">
-                                <li><a href="https://galenwhiteprojectonedelicious.netlify.app/" target="_blank"
-                                        aria-label="Live site - Opens in new tab">Live
-                                        site</a></li>
-                                <li><a href="https://github.com/GHWhite419/galenWhiteProjectOne" target="_blank"
-                                        aria-label="Repository - Opens in new tab">Repository</a></li>
-                            </ul>
-                        </li>
+              <li class="projectModal modalHidden modal2">
+                <i
+                  class="fa-solid fa-x fa-xs closeModal"
+                  aria-label="Close this pop-up."
+                ></i>
+                <p>
+                  Create your own personal list to track those movies you've
+                  always wanted to watch! Features user authentication and a
+                  live database.
+                  <br />
+                  Collaborative project with Jackson Watt-Bowers.
+                </p>
+                <ul class="projectSkills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Sass</li>
+                  <li>Javascript</li>
+                  <li>Firebase</li>
+                </ul>
+                <ul class="projectLinks">
+                  <li>
+                    <a
+                      href="https://wbwmovies.netlify.app/"
+                      target="_blank"
+                      aria-label="Live site - Opens in new tab"
+                      >Live site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/WattBowers/WBWMovies"
+                      target="_blank"
+                      aria-label="Repository - Opens in new tab"
+                      >Repository</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                        <li class="project project2">
-                            <img src="./assets/projectMovies.png"
-                                alt="Screenshot of a webpage displaying a list with a series of movie titles.">
-                            <button type="button" class="projectButton">WBW Movies</button>
-                        </li>
+              <li class="project project3">
+                <img
+                  src="./assets/projectBikerland.png"
+                  alt="Screenshot of a webpage containg a backdrop of a bicycle."
+                />
+                <button type="button" class="projectButton">
+                  Bikerland
+                </button>
+              </li>
 
-                        <li class="projectModal modalHidden modal2">
-                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
-                            <p>Create your own personal list to track those movies you've always wanted to watch!
-                                Features user authentication and a live database.
-                                <br>
-                                Collaborative project with Jackson Watt-Bowers.
-                            </p>
-                            <ul class="projectSkills">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Sass</li>
-                                <li>Javascript</li>
-                                <li>Firebase</li>
-                            </ul>
-                            <ul class="projectLinks">
-                                <li><a href="https://wbwmovies.netlify.app/" target="_blank"
-                                        aria-label="Live site - Opens in new tab">Live site</a></li>
-                                <li><a href="https://github.com/WattBowers/WBWMovies" target="_blank"
-                                        aria-label="Repository - Opens in new tab">Repository</a>
-                                </li>
-                            </ul>
-                        </li>
+              <li class="projectModal modalHidden modal3">
+                <i
+                  class="fa-solid fa-x fa-xs closeModal"
+                  aria-label="Close this pop-up."
+                ></i>
+                <p>
+                  A single page PSD conversion featuring a functional hamburger
+                  menu, full responsiveness, and accessibility practices.
+                </p>
+                <ul class="projectSkills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+                <ul class="projectLinks">
+                  <li>
+                    <a
+                      href="https://galenwhitebikerland.netlify.app"
+                      target="_blank"
+                      aria-label="Live site - Opens in new tab"
+                      >Live site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/GHWhite419/junoBootcampAssignment1BikerLand"
+                      target="_blank"
+                      aria-label="Repository - Opens in new tab"
+                      >Repository</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                        <li class="project project3">
-                            <img src="./assets/projectBikerland.png"
-                                alt="Screenshot of a webpage containg a backdrop of a bicycle.">
-                            <button type="button" class="projectButton">Bikerland</button>
-                        </li>
+              <li class="project project4">
+                <img
+                  src="./assets/projectLibrary.png"
+                  alt="Screenshot of a website an input field against a backdrop of a book store."
+                />
+                <button type="button" class="projectButton">
+                  Polyglot Library
+                </button>
+              </li>
 
-                        <li class="projectModal modalHidden modal3">
-                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
-                            <p>A single page PSD conversion featuring a functional hamburger menu, full responsiveness,
-                                and accessibility practices.</p>
-                            <ul class="projectSkills">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
-                            <ul class="projectLinks">
-                                <li><a href="https://galenwhitebikerland.netlify.app" target="_blank"
-                                        aria-label="Live site - Opens in new tab">Live
-                                        site</a></li>
-                                <li><a href="https://github.com/GHWhite419/junoBootcampAssignment1BikerLand"
-                                        target="_blank" aria-label="Repository - Opens in new tab">Repository</a></li>
-                            </ul>
-                        </li>
+              <li class="projectModal modalHidden modal4">
+                <i
+                  class="fa-solid fa-x fa-xs closeModal"
+                  aria-label="Close this pop-up."
+                ></i>
+                <p>
+                  Practice reading in a foreign language by using this API-based
+                  app to get a book recommendation.
+                </p>
+                <ul class="projectSkills">
+                  <li>React</li>
+                  <li>Restful API</li>
+                  <li>CSS</li>
+                </ul>
+                <ul class="projectLinks">
+                  <li>
+                    <a
+                      href="https://polyglotlibrary.netlify.app/"
+                      target="_blank"
+                      aria-label="Live site - Opens in new tab"
+                      >Live site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/GHWhite419/galenWhiteProject3"
+                      target="_blank"
+                      aria-label="Repository - Opens in new tab"
+                      >Repository</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-                        <li class="project project4">
-                            <img src="./assets/projectLibrary.png" alt="Screenshot of a website an input field against a backdrop of a book store.">
-                            <button type="button" class="projectButton">Polyglot Library</button>
-                        </li>
+        <section class="contact">
+          <div class="wrapper">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xqkodadl" method="post">
+              <h3>Let's get in touch!</h3>
+              <label for="name">
+                <span class="sr-only">Your name</span>
+                <input
+                  type="text"
+                  name="name"
+                  id=" name"
+                  placeholder="Your name"
+                />
+              </label>
+              <label for="email">
+                <span class="sr-only">Your email</span>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your email"
+                />
+              </label>
+              <label for="message">
+                <span class="sr-only">Your message</span>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your message"
+                ></textarea>
+              </label>
+              <button type="submit" aria-label="Send message">
+                <i class="fa-sharp fa-solid fa-right-long"></i>
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
 
-                        <li class="projectModal modalHidden modal4">
-                            <i class="fa-solid fa-x fa-xs closeModal" aria-label="Close this pop-up."></i>
-                            <p>Practice reading in a foreign language by using this API-based app to get a book recommendation.</p>
-                            <ul class="projectSkills">
-                                <li>React</li>
-                                <li>Restful API</li>
-                                <li>CSS</li>
-                            </ul>
-                            <ul class="projectLinks">
-                                <li><a href="https://polyglotlibrary.netlify.app/" target="_blank"
-                                        aria-label="Live site - Opens in new tab">Live
-                                        site</a></li>
-                                <li><a href="https://github.com/GHWhite419/galenWhiteProject3"
-                                        target="_blank" aria-label="Repository - Opens in new tab">Repository</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="contact">
-                <div class="wrapper">
-                    <h2>Contact</h2>
-                    <form action="https://formspree.io/f/xqkodadl" method="post">
-                        <h3>Let's get in touch!</h3>
-                        <label for="name">
-                            <span class="sr-only">Your name</span>
-                            <input type="text" name="name" id=" name" placeholder="Your name">
-                        </label>
-                        <label for="email">
-                            <span class="sr-only">Your email</span>
-                            <input type="email" name="email" id="email" placeholder="Your email">
-                        </label>
-                        <label for="message">
-                            <span class="sr-only">Your message</span>
-                            <textarea name="message" id="message" placeholder="Your message"></textarea>
-                        </label>
-                        <button type="submit" aria-label="Send message">
-                            <i class="fa-sharp fa-solid fa-right-long"></i>
-                        </button>
-                    </form>
-                </div>
-            </section>
-        </div>
-
-        <button class="nextSlide" aria-label="Next section">
-            <i class="fa-solid fa-angle-right fa-2xl" aria-hidden="true" TABINDEX="2"></i>
-        </button>
-
+      <button aria-label="Next section" class="nextSlide">
+        <i
+          class="fa-solid fa-angle-right fa-2xl"
+          aria-hidden="true"
+          TABINDEX="2"
+        ></i>
+      </button>
     </main>
     <footer>
-        <div class="wrapper">
-            <ul class="social">
-                <li><a href="https://www.linkedin.com/in/galenhwhite/" target="_blank"
-                        aria-label="Galen's LinkedIn - Opens in new tab"><i class="fa-brands fa-linkedin"
-                            TABINDEX="0"></i></a></li>
-                <li><a href="https://github.com/GHWhite419/" target="_blank"
-                        aria-label="Galen's GitHub - Opens in new tab"><i class="fa-brands fa-github"
-                            TABINDEX="0"></i></a>
-                </li>
-            </ul>
-            <p>Created by Galen White. Design credits: <a href="https://themeforest.net/user/moontheme">moontheme.</a>
-            </p>
-        </div>
+      <div class="wrapper">
+        <ul class="social">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/galenhwhite/"
+              target="_blank"
+              aria-label="Galen's LinkedIn - Opens in new tab"
+              ><i class="fa-brands fa-linkedin" TABINDEX="0"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/GHWhite419/"
+              target="_blank"
+              aria-label="Galen's GitHub - Opens in new tab"
+              ><i class="fa-brands fa-github" TABINDEX="0"></i
+            ></a>
+          </li>
+        </ul>
+        <p>
+          Created by Galen White. Design credits:
+          <a href="https://themeforest.net/user/moontheme">moontheme.</a>
+        </p>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/e4f1610b04.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/e4f1610b04.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
