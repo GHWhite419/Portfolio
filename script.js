@@ -108,42 +108,58 @@ closeModal.forEach(closeButton => {
 
 
 // ** Nav menu
+// The following three variables select the three main elements of the hamburger menu: the open button, the close button, and the menu itself.
 const openMenu = document.querySelector('.openMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const navMenu = document.querySelector('.navMenu');
+
+// This adds an event to the open button which simply adds a class to the nav menu.
 openMenu.addEventListener('click', () => {
     navMenu.classList.add('navOpen');
 })
+
+// This event listener removes that same class from the nav menu.
 closeMenu.addEventListener('click', () => {
     navMenu.classList.remove('navOpen');
 })
 
+// Here we have an HTML Collection for all of the links inside of the nav menu.
 const links = document.querySelectorAll('.navMenu li');
+
+// Here I start off by adding an event listener to each link in the nav menu, doing so using a forEach loop.
 links.forEach(link => {
     link.addEventListener('click', (e) => {
+        // Here I need to create a variable which matches the index of the links collection with that of the targeted link.
         const index = Array.from(links).indexOf(e.target);
+        // Once the indexes are matched up, I then further match the currentSlide variable with the value of the index variable, enabling me to reference it in my below function and easily switch to the appropriate slide based on the target link. 
         currentSlide = index + 1;
+        // Now that a slide is targeted and the appropraite variables are correctly adjusted, I remove the navOpen class from the nav menu which causes it to close. I also remove all of the colors from the hoverable elements so that they can be changed to match the new slide.
         navMenu.classList.remove('navOpen');
         openMenu.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         linkedIn.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         gitHub.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         prevSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
         nextSlide.classList.remove('introColor', 'aboutColor', 'projectsColor', 'contactColor');
+        // Then, it's as simple as triggering the same slideshow loop using the targeted index and currentSlide variables.
         slideShow.forEach((slide, index) => {
             slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
             slide.style.transition = '.3s';
         })
+        // And finally I finish by triggering the slideColor and disableButton functions for the appropriate stylings.
         slideColor();
         disableButton();
     })
 })
 
 // ** Dynamic hover styles
+// I begin by selecting the LinkedIn and Github icons in the footer and saving them to new variables, as they are the only hoverable elements that have not been targeted in the DOM yet.
 const linkedIn = document.querySelector('footer .fa-linkedin');
 const gitHub = document.querySelector('footer .fa-github');
+// This function uses the switch statement (my first time experimenting with it, fun stuff!). Each case in the statement references the value of currentSlide to select the appropraite color to apply to the hoverable icons. Each case adds the colors to the hoverable states using predefined SASS classes. Since the work of removing the color classes is done first every time we change slides, all we're doing here in this switch statement is adding new colors back to the needed elements.
 const slideColor = () => {
     switch (currentSlide) {
         case 0:
+            // Case 0 = the Intro slide, where we use a bright red.
             openMenu.classList.add('introColor');
             linkedIn.classList.add('introColor');
             gitHub.classList.add('introColor');
@@ -152,6 +168,7 @@ const slideColor = () => {
 
             break;
         case 1:
+            // Case 1 is my about page, using a darker purple.
             openMenu.classList.add('aboutColor');
             linkedIn.classList.add('aboutColor');
             gitHub.classList.add('aboutColor');
@@ -160,6 +177,7 @@ const slideColor = () => {
 
             break;
         case 2:
+            // Case 2 features my projects, with a baby blue color scheme.
             openMenu.classList.add('projectsColor');
             linkedIn.classList.add('projectsColor');
             gitHub.classList.add('projectsColor');
@@ -168,6 +186,7 @@ const slideColor = () => {
 
             break;
         case 3:
+            // And case 3 is my contact page, utilizing an emerald green.
             openMenu.classList.add('contactColor');
             linkedIn.classList.add('contactColor');
             gitHub.classList.add('contactColor');
@@ -177,11 +196,14 @@ const slideColor = () => {
             break;
     }
 }
+// After creating the feature, I call it once to initialize it so we have some hover colors as soon as the user loads the page. It then correctly changes every time the user navigates between slides :)
 slideColor();
 
 
 // ** Clear email form
+// This is code pre-written by formspree that ensures the email form is empty when a user reloads the webpage.
 window.onbeforeunload = () => {
+    // The form loop targets every field of the contact form, while the reset method clears it. Straightforward stuff :D
     for (const form of document.getElementsByTagName('form')) {
         form.reset();
     }
