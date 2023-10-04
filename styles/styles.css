@@ -664,6 +664,7 @@ section {
   margin-bottom: 3rem;
 }
 .projects ul .modalHidden {
+  visibility: hidden;
   -webkit-transform: translateX(400%);
           transform: translateX(400%);
 }

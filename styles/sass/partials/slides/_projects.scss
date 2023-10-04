@@ -39,6 +39,7 @@
         margin-bottom: 3rem;
 
         .modalHidden {
+            visibility: hidden;
             transform: translateX(400%);
         }
     }
