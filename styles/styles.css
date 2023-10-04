@@ -310,6 +310,7 @@ header .navMenu {
           transform: translateY(-100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  visibility: hidden;
 }
 header li {
   padding: 2rem;
@@ -337,6 +338,7 @@ header .closeMenu:hover, header .closeMenu:focus {
 header .navOpen {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  visibility: visible;
 }
 header i {
   padding-top: 1rem;

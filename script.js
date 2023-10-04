@@ -51,6 +51,7 @@ prevSlide.addEventListener("click", function () {
   // Completing the effect, I re-declare slideColor (detailed below) to re-color the hoverable buttons, and disableButton to check if the "previous" button should be disabled.
   slideColor();
   disableButton();
+  visHide();
 });
 
 // The "next" button is the same exact principle, naturally with some slight alterations.
@@ -70,6 +71,7 @@ nextSlide.addEventListener("click", function () {
   });
   slideColor();
   disableButton();
+  visHide();
 });
 
 // ** Project modal popups
@@ -82,7 +84,7 @@ const closeModal = document.querySelectorAll(".closeModal");
 projectButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     // The event triggers when the button is pressed. My aim is to remove a "hidden" class from the button's corresponding modal.
-    // To ensure the button selects the right modal, I have to turn the projectButton HTMLCollection into an arraay and parse an index.
+    // To ensure the button selects the right modal, I have to turn the projectButton HTMLCollection into an array and parse an index.
     const index = Array.from(projectButton).indexOf(e.target);
 
     // Having converted projectButton into an array and parsed clicked button's index, I can now target its matching project modal using that index. So for example, when I click button 0, modal 0 will display.
@@ -146,6 +148,7 @@ links.forEach((link) => {
     // And finally I finish by triggering the slideColor and disableButton functions for the appropriate stylings.
     slideColor();
     disableButton();
+    visHide();
   });
 });
 
@@ -239,3 +242,13 @@ window.onbeforeunload = () => {
     form.reset();
   }
 };
+
+const visHide = () => {
+  slideShow.forEach((slide, index) => {
+    slide.style.visibility = 'visible';
+    if (index != currentSlide) {
+        slide.style.visibility = 'hidden';
+    }
+  });
+};
+visHide();
