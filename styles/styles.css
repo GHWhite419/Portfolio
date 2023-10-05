@@ -320,7 +320,7 @@ header li {
   font-family: "Open Sans", sans-serif;
 }
 header li:first-of-type:hover, header li:first-of-type:focus {
-  color: #5C4971;
+  color: #9867C5;
 }
 header li:nth-of-type(2):hover, header li:nth-of-type(2):focus {
   color: #00AEEF;
@@ -517,7 +517,7 @@ section {
 }
 
 .aboutColor:focus-visible, .aboutColor:hover {
-  color: #5C4971;
+  color: #9867C5;
 }
 
 .projectsColor:focus-visible, .projectsColor:hover {
@@ -549,7 +549,7 @@ section {
 }
 
 .about {
-  background: url(../assets/purpleStripe.png);
+  background: url(../assets/purpleStripe2.png);
   background-size: 70rem;
   background-position-x: -38rem;
   background-position-y: -11rem;
@@ -567,7 +567,7 @@ section {
   padding: 1rem;
   border: 4px solid;
   border-radius: 5px;
-  border-color: #5C4971;
+  border-color: #9867C5;
   margin: auto;
 }
 .about .bio p {
@@ -586,7 +586,7 @@ section {
   padding: 1rem;
   border: 4px solid;
   border-radius: 5px;
-  border-color: #5C4971;
+  border-color: #9867C5;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -622,7 +622,7 @@ section {
 }
 .about ul i {
   font-size: 4.5rem;
-  color: #5C4971;
+  color: #9867C5;
 }
 
 .projects {
