@@ -310,6 +310,7 @@ header .navMenu {
           transform: translateY(-100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  visibility: hidden;
 }
 header li {
   padding: 2rem;
@@ -337,6 +338,7 @@ header .closeMenu:hover, header .closeMenu:focus {
 header .navOpen {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  visibility: visible;
 }
 header i {
   padding-top: 1rem;
@@ -515,7 +517,7 @@ section {
 }
 
 .aboutColor:focus-visible, .aboutColor:hover {
-  color: #5C4971;
+  color: #9867C5;
 }
 
 .projectsColor:focus-visible, .projectsColor:hover {
@@ -527,7 +529,7 @@ section {
 }
 
 .intro {
-  background: url(../assets/redStripe.png);
+  background: url(../assets/redStripe.webp);
   background-size: 70rem;
   background-position-x: -21rem;
   background-position-y: -11rem;
@@ -547,7 +549,7 @@ section {
 }
 
 .about {
-  background: url(../assets/purpleStripe.png);
+  background: url(../assets/purpleStripe.webp);
   background-size: 70rem;
   background-position-x: -38rem;
   background-position-y: -11rem;
@@ -624,7 +626,7 @@ section {
 }
 
 .projects {
-  background: url(../assets/blueStripe.png);
+  background: url(../assets/blueStripe.webp);
   background-size: 70rem;
   background-position-x: -3rem;
   background-position-y: -11rem;
@@ -664,6 +666,7 @@ section {
   margin-bottom: 3rem;
 }
 .projects ul .modalHidden {
+  visibility: hidden;
   -webkit-transform: translateX(400%);
           transform: translateX(400%);
 }
@@ -690,6 +693,11 @@ section {
   border: 1px solid #000;
   padding: 0.5rem 0.6rem;
   border-radius: 1rem;
+  cursor: pointer;
+}
+.projects .projectButton:hover, .projects .projectButton:focus-visible {
+  color: #000;
+  outline: none;
 }
 .projects .projectModal {
   position: absolute;
@@ -711,6 +719,12 @@ section {
   margin: 1rem;
   max-width: 80%;
 }
+.projects .closeModal {
+  cursor: pointer;
+}
+.projects .closeModal:hover, .projects .closeModal:focus, .projects .closeModal:active {
+  color: #F7484E;
+}
 .projects .projectSkills li {
   background-color: transparent;
   color: #00AEEF;
@@ -729,6 +743,9 @@ section {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.2rem;
+}
+.projects .projectLinks li a:hover, .projects .projectLinks li a:focus-visible {
+  color: #000;
 }
 .projects .modal1 {
   -webkit-transform: translateY(9rem);
@@ -852,7 +869,7 @@ section {
 }
 
 .contact {
-  background: url(../assets/greenStripe.png);
+  background: url(../assets/greenStripe.webp);
   background-size: 70rem;
   background-position-x: -3rem;
   background-position-y: -11rem;
