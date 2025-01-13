@@ -1,25 +1,42 @@
 .contact {
-    @media (min-width: 515px) {
-        textarea {
-            height: 8rem;
-        }
+  @media (min-width: 515px) {
+    textarea {
+      height: 8rem;
     }
+  }
 
-    @media (min-width: 650px) {
-        h2 {
-            font-size: 5rem;
-        }
-        form label {
-            width: 49%;
-        }
+  @media (min-width: 650px) {
+    h2 {
+      font-size: 5rem;
     }
+    form label {
+      width: 49%;
+    }
+  }
 
-    @media (min-width: 1200px) {
-        overflow: hidden;
-        h2 {
-            margin: 0;
-            margin-top: -1rem;
-            text-align: right;
-        }
+  @media (min-width: 1200px) {
+    overflow: hidden;
+    h2 {
+      margin: 0;
+      margin-top: -1rem;
+      text-align: right;
     }
+  }
+
+  @media (min-width: 1280px) {
+    background-size: 78.8rem;
+    background-position-x: -3.4rem;
+  }
+
+  @media (min-width: 1440px) {
+    background-size: 87.6rem;
+    background-position-x: -3.8rem;
+    height: 100%;
+  }
+
+  @media (min-width: 1600px) {
+    background-size: 105.1rem;
+    background-position-x: -4.6rem;
+    background-position-y: -17rem;
+  }
 }
