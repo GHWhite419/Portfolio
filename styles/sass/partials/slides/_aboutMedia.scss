@@ -1,37 +1,50 @@
 .about {
-    @media (min-width: 580px) {
-        background-position-x: -3rem;
+  @media (min-width: 580px) {
+    background-position-x: -3rem;
 
-        .skillList {
-            margin-top: 2rem;
-            margin-bottom: 4rem;
+    .skillList {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
 
-        }
+  h2 {
+    @media (min-width: 625px) {
+      margin-top: 5rem;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    overflow: hidden;
+
+    .bio {
+      margin: 0;
     }
 
-    h2 {
-        @media (min-width: 625px) {
-            margin-top: 5rem;
-            text-align: left;
-        }
+    .skillList {
+      position: absolute;
+      top: -2rem;
+      right: 5rem;
+      background: transparent;
+      border: none;
+      opacity: 1;
     }
+  }
 
-    @media (min-width: 1200px) {
-        overflow: hidden;
+  @media (min-width: 1280px) {
+    background-size: 78.8rem;
+    background-position-x: -3.4rem;
+  }
 
-        .bio {
-            margin: 0;
-        }
-
-        .skillList {
-            position: absolute;
-            top: -2rem;
-            right: 5rem;
-            background: transparent;
-            border: none;
-            opacity: 1;
-        }
-
-    }
-
+  @media (min-width: 1440px) {
+    background-size: 87.6rem;
+    background-position-x: -3.8rem;
+    height: 100%;
+  }
+  @media (min-width: 1600px) {
+    background-size: 105.1rem;
+    background-position-x: -4.6rem;
+    background-position-y: -19rem;
+  }
 }
